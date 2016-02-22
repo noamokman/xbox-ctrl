@@ -37,7 +37,8 @@
     "bindings": "^1.2.1",
     "commander": "^2.9.0",
     "inquirer": "^0.12.0",
-    "nan": "^2.2.0"
+    "nan": "^2.2.0",
+    "update-notifier": "^0.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
