@@ -52,11 +52,6 @@ xboxCtrl.off(1);
 xboxCtrl.offAll();
 ```
 
-## Run Tests
-``` bash
-$ npm test
-```
-
 ## License
 
 [MIT](LICENSE)
