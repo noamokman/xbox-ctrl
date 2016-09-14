@@ -17,13 +17,15 @@ $ [sudo] npm install xbox-ctrl --save
 #### Options
 ``` bash
 $ xbox-ctrl --help
- 
+
   Usage: xbox-ctrl <command>
+
 
   Commands:
 
-    off [options] [controllers...]  Turn off controllers
-    list                            List connected controllers
+    off [options] [controllers...]      Turn off controllers
+    vibrate [options] [controllers...]  Vibrate controllers
+    list                                List connected controllers
 
   Node api for the xbox controller
 
@@ -50,6 +52,12 @@ xboxCtrl.off(1);
 
 // turns off all controllers
 xboxCtrl.offAll();
+
+// vibrate controller 1
+xboxCtrl.vibrate(1);
+
+// vibrate all controllers
+xboxCtrl.vibrateAll();
 ```
 
 ## License
