@@ -10,7 +10,8 @@
   "scripts": {
     "test": "eslint lib --fix",
     "build": "babel lib -d dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "install": "prebuild --install"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "babel-eslint": "^6.1.2",
     "babel-preset-es2015": "^6.14.0",
     "eslint": "^3.5.0",
-    "eslint-config-noamokman": "^3.0.1"
+    "eslint-config-noamokman": "^3.0.1",
+    "prebuild": "^4.2.2"
   }
 }
