@@ -8,7 +8,10 @@
     "xctrl": "bin/xbox-ctrl"
   },
   "scripts": {
-    "test": "eslint lib --fix",
+    "test": "npm run lint",
+    "lint": "eslint lib --fix",
+    "precommit": "npm test",
+    "commitmsg": "validate-commit-msg",
     "build": "babel lib -d dist",
     "prepublish": "npm run build",
     "install": "prebuild --install"
@@ -34,19 +37,23 @@
     "url": "https://github.com/noamokman/xbox-ctrl/issues"
   },
   "homepage": "https://github.com/noamokman/xbox-ctrl#readme",
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {
     "bindings": "^1.2.1",
     "commander": "^2.9.0",
-    "inquirer": "^1.1.3",
+    "inquirer": "^1.2.2",
     "nan": "^2.4.0",
     "update-notifier": "^1.0.2",
-    "prebuild": "^4.2.2"
+    "prebuild": "^4.3.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "^6.14.0",
-    "eslint": "^3.5.0",
-    "eslint-config-noamokman": "^3.0.1"
+    "babel-cli": "^6.16.0",
+    "babel-preset-env": "0.0.6",
+    "eslint": "^3.8.1",
+    "eslint-config-noamokman": "^5.0.1",
+    "husky": "^0.11.9",
+    "validate-commit-msg": "^2.8.2"
   }
 }
