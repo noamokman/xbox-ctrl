@@ -2,7 +2,7 @@
   "name": "xbox-ctrl",
   "version": "1.2.2",
   "description": "Node api for the xbox controller",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "bin": {
     "xbox-ctrl": "bin/xbox-ctrl",
     "xctrl": "bin/xbox-ctrl"
