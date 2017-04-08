@@ -14,7 +14,7 @@
     "commitmsg": "validate-commit-msg",
     "build": "babel lib -d dist",
     "prepublish": "npm run build",
-    "install": "prebuild --install",
+    "install": "prebuild-install || node-gyp rebuild",
     "upload": "prebuild --all -u"
   },
   "repository": {
@@ -44,17 +44,18 @@
   "dependencies": {
     "bindings": "^1.2.1",
     "commander": "^2.9.0",
-    "inquirer": "^2.0.0",
-    "nan": "^2.5.0",
-    "update-notifier": "^1.0.3",
-    "prebuild": "^5.1.2"
+    "inquirer": "^3.0.6",
+    "nan": "^2.6.1",
+    "prebuild-install": "^2.1.1",
+    "update-notifier": "^2.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-env": "^1.1.4",
-    "eslint": "^3.12.2",
-    "eslint-config-noamokman": "^5.0.1",
-    "husky": "^0.12.0",
-    "validate-commit-msg": "^2.8.2"
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.3.3",
+    "eslint": "^3.19.0",
+    "eslint-config-noamokman": "^5.2.0",
+    "husky": "^0.13.3",
+    "validate-commit-msg": "^2.12.1",
+    "prebuild": "^6.1.0"
   }
 }
