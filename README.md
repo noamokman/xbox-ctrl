@@ -3,36 +3,38 @@ Node api for the xbox controller
 
 ## Installation
 As cli tool
-``` bash
+```bash
 $ [sudo] npm install xbox-ctrl -g
 ```
 
 Programmatically
-``` bash
-$ [sudo] npm install xbox-ctrl --save
+```bash
+$ [sudo] npm install xbox-ctrl
 ```
 
 ## Usage
 ### CLI
-#### Options
-``` bash
-$ xbox-ctrl --help
+```bash
+$  xbox-ctrl 0.0.0 - Node api for the xbox controller
+     
+   USAGE
 
-  Usage: xbox-ctrl <command>
+     xbox-ctrl <command> [options]
 
+   COMMANDS
 
-  Commands:
+     off [controllers...]          Turn off controllers               
+     vibrate [controllers...]      Vibrate controllers                
+     list                          List connected controllers         
+     help <command>                Display help for a specific command
 
-    off [options] [controllers...]      Turn off controllers
-    vibrate [options] [controllers...]  Vibrate controllers
-    list                                List connected controllers
+   GLOBAL OPTIONS
 
-  Node api for the xbox controller
-
-  Options:
-
-    -h, --help     output usage information
-    -V, --version  output the version number
+     -h, --help         Display help                                      
+     -V, --version      Display version                                   
+     --no-color         Disable colors                                    
+     --quiet            Quiet mode - only displays warn and error messages
+     -v, --verbose      Verbose mode - will also output debug messages    
 
 
 ```
@@ -40,26 +42,25 @@ $ xbox-ctrl --help
 This module is exported as `xbox-ctrl` and as `xctrl`.
 
 ### Programmatically
-#### Example
-``` js
-const xboxCtrl = require('xbox-ctrl');
+```js
+import {list, off, offAll, vibrate, vibrateAll} from 'xbox-ctrl';
 
 // list connected controllers
-xboxCtrl.list(); // => [1, 2]
+list(); // => [1, 2]
 
 // turns off controller 1
-xboxCtrl.off(1);
+off(1);
 
 // turns off all controllers
-xboxCtrl.offAll();
+offAll();
 
 // vibrate controller 1
-xboxCtrl.vibrate(1);
+vibrate(1);
 
 // vibrate all controllers
-xboxCtrl.vibrateAll();
+vibrateAll();
 ```
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [Noam Okman](https://github.com/noamokman)
