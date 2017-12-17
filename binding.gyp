@@ -1,9 +1,17 @@
 {
   "targets": [
     {
-      "target_name": "xinput",
-      "sources": ["src/xinput_win.cpp"],
-      "include_dirs": ["<!(node -e \"require('nan')\")"]
+      "target_name": "xboxCtrl",
+      "sources": [
+        "src/index.cc",
+        "src/Off.cc",
+        "src/List.cc",
+        "src/Vibrate.cc"
+      ],
+      "include_dirs": [
+        "src",
+        "<!(node -e \"require('nan')\")"
+      ]
     }
   ]
 }
