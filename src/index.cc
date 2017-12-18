@@ -1,7 +1,7 @@
 #include <nan.h>
-#include "Off.h"
-#include "Vibrate.h"
-#include "List.h"
+#include "Off/Off.h"
+#include "Vibrate/Vibrate.h"
+#include "List/List.h"
 
 NAN_MODULE_INIT(init) {
   Off::init(target);

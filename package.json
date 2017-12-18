@@ -48,6 +48,7 @@
     "inquirer": "^4.0.1",
     "nan": "^2.8.0",
     "p-try": "^1.0.0",
+    "pify": "^3.0.0",
     "prebuild-install": "^2.4.1",
     "update-notifier": "^2.3.0"
   },
