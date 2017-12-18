@@ -42,11 +42,12 @@ $  xbox-ctrl 0.0.0 - Node api for the xbox controller
 This module is exported as `xbox-ctrl` and as `xctrl`.
 
 ### Programmatically
+All the methods return a promise
 ```js
 import {list, off, offAll, vibrate, vibrateAll} from 'xbox-ctrl';
 
 // list connected controllers
-list(); // => [1, 2]
+list(); // => [0, 1]
 
 // turns off controller 1
 off(1);
@@ -60,6 +61,9 @@ vibrate(1);
 // vibrate all controllers
 vibrateAll();
 ```
+
+### Sync methods
+Every method has a sync implementation as well, just add `Sync` to the method name
 
 ## License
 
