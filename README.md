@@ -44,10 +44,13 @@ This module is exported as `xbox-ctrl` and as `xctrl`.
 ### Programmatically
 All the methods return a promise
 ```js
-import {list, off, offAll, vibrate, vibrateAll} from 'xbox-ctrl';
+import {list, build, off, offAll, vibrate, vibrateAll} from 'xbox-ctrl';
 
 // list connected controllers
 list(); // => [0, 1]
+
+// build a controller instance for every connected controller
+build(); // => [new Controller(0), new Controller(1)]
 
 // turns off controller 1
 off(1);
@@ -61,8 +64,18 @@ vibrate(1);
 // vibrate all controllers
 vibrateAll();
 ```
+#### Controller class
+This module exports a `Controller` class as well
+```js
+import {Controller} from 'xbox-ctrl';
 
-### Sync methods
+const controller = new Controller(1);
+
+controller.vibrate();
+controller.off();
+```
+
+#### Sync methods
 Every method has a sync implementation as well, just add `Sync` to the method name
 
 ## License
